@@ -1,0 +1,5 @@
+0.114
+perl(Fennec::Lite)
+perl(Meta::Builder)
+perl(Test::Exception)
+perl(aliased)
