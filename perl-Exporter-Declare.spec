@@ -66,14 +66,14 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.0/Exporter/Declare.pm
-/usr/lib/perl5/vendor_perl/5.28.0/Exporter/Declare/Export.pm
-/usr/lib/perl5/vendor_perl/5.28.0/Exporter/Declare/Export/Alias.pm
-/usr/lib/perl5/vendor_perl/5.28.0/Exporter/Declare/Export/Generator.pm
-/usr/lib/perl5/vendor_perl/5.28.0/Exporter/Declare/Export/Sub.pm
-/usr/lib/perl5/vendor_perl/5.28.0/Exporter/Declare/Export/Variable.pm
-/usr/lib/perl5/vendor_perl/5.28.0/Exporter/Declare/Meta.pm
-/usr/lib/perl5/vendor_perl/5.28.0/Exporter/Declare/Specs.pm
+/usr/lib/perl5/vendor_perl/5.28.1Exporter/Declare.pm
+/usr/lib/perl5/vendor_perl/5.28.1Exporter/Declare/Export.pm
+/usr/lib/perl5/vendor_perl/5.28.1Exporter/Declare/Export/Alias.pm
+/usr/lib/perl5/vendor_perl/5.28.1Exporter/Declare/Export/Generator.pm
+/usr/lib/perl5/vendor_perl/5.28.1Exporter/Declare/Export/Sub.pm
+/usr/lib/perl5/vendor_perl/5.28.1Exporter/Declare/Export/Variable.pm
+/usr/lib/perl5/vendor_perl/5.28.1Exporter/Declare/Meta.pm
+/usr/lib/perl5/vendor_perl/5.28.1Exporter/Declare/Specs.pm
 
 %files dev
 %defattr(-,root,root,-)
