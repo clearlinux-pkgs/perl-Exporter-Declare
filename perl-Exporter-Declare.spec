@@ -4,10 +4,10 @@
 #
 Name     : perl-Exporter-Declare
 Version  : 0.114
-Release  : 8
+Release  : 9
 URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Exporter-Declare-0.114.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Exporter-Declare-0.114.tar.gz
-Summary  : 'Exporting done right'
+Summary  : Exporting done right
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 BuildRequires : buildreq-cpan
@@ -31,6 +31,7 @@ introspection.
 Summary: dev components for the perl-Exporter-Declare package.
 Group: Development
 Provides: perl-Exporter-Declare-devel = %{version}-%{release}
+Requires: perl-Exporter-Declare = %{version}-%{release}
 
 %description dev
 dev components for the perl-Exporter-Declare package.
