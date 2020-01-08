@@ -4,12 +4,13 @@
 #
 Name     : perl-Exporter-Declare
 Version  : 0.114
-Release  : 9
+Release  : 10
 URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Exporter-Declare-0.114.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Exporter-Declare-0.114.tar.gz
-Summary  : Exporting done right
+Summary  : 'Exporting done right'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
+Requires: perl-Exporter-Declare-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Fennec::Lite)
 BuildRequires : perl(Meta::Builder)
@@ -37,14 +38,24 @@ Requires: perl-Exporter-Declare = %{version}-%{release}
 dev components for the perl-Exporter-Declare package.
 
 
+%package perl
+Summary: perl components for the perl-Exporter-Declare package.
+Group: Default
+Requires: perl-Exporter-Declare = %{version}-%{release}
+
+%description perl
+perl components for the perl-Exporter-Declare package.
+
+
 %prep
 %setup -q -n Exporter-Declare-0.114
+cd %{_builddir}/Exporter-Declare-0.114
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -67,14 +78,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Exporter/Declare.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Exporter/Declare/Export.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Exporter/Declare/Export/Alias.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Exporter/Declare/Export/Generator.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Exporter/Declare/Export/Sub.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Exporter/Declare/Export/Variable.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Exporter/Declare/Meta.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Exporter/Declare/Specs.pm
 
 %files dev
 %defattr(-,root,root,-)
@@ -86,3 +89,14 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/Exporter::Declare::Export::Variable.3
 /usr/share/man/man3/Exporter::Declare::Meta.3
 /usr/share/man/man3/Exporter::Declare::Specs.3
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/Exporter/Declare.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Exporter/Declare/Export.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Exporter/Declare/Export/Alias.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Exporter/Declare/Export/Generator.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Exporter/Declare/Export/Sub.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Exporter/Declare/Export/Variable.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Exporter/Declare/Meta.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Exporter/Declare/Specs.pm
