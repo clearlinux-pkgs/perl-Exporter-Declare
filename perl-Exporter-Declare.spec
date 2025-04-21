@@ -7,7 +7,7 @@
 #
 Name     : perl-Exporter-Declare
 Version  : 0.114
-Release  : 25
+Release  : 26
 URL      : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Exporter-Declare-0.114.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Exporter-Declare-0.114.tar.gz
 Summary  : 'Exporting done right'
